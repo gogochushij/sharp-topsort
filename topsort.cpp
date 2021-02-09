@@ -9,11 +9,6 @@ using namespace std;
 
 long long factorial(int n)
 {
-	if (n == 20)
-		cout << "(!) Warning: possible LL overflow" << endl;
-	if (n == 13)
-		cout << "(!) Warning: possible unbearably long computation" << endl;
-	
 	if (n == 0) return 1;
 	return 1ll*n*factorial(n-1);
 }
@@ -51,6 +46,11 @@ int main()
 		cout << v << " ";
 	}
 	cout << endl;
+	
+	if (vertices.size() >= 20)
+		cout << "(!) Warning: possible LL overflow" << endl;
+	if (vertices.size() >= 13)
+		cout << "(!) Warning: possible unbearably long computation" << endl;
 	
 	assert(input.size() % 2 == 0);
 	
