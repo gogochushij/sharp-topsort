@@ -9,8 +9,10 @@ using namespace std;
 
 long long factorial(int n)
 {
-	if (n >= 20)
+	if (n == 20)
 		cout << "(!) Warning: possible LL overflow" << endl;
+	if (n == 13)
+		cout << "(!) Warning: possible unbearably long computation" << endl;
 	
 	if (n == 0) return 1;
 	return 1ll*n*factorial(n-1);
@@ -63,7 +65,7 @@ int main()
 		cout << e.first << " < " << e.second << endl;
 	}
 	
-	int k = 0;
+	long long k = 0;
 	vector<string> perm;
 	for (string v : vertices) perm.push_back(v);
 	
